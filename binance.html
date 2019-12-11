@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Binance API Project</title>
+  <meta name="description" content="Binance API Project">
+  <meta name="" content="">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+</html>
+</body>    
+<script>
+var binanceApiUrl = "https://api.binance.com";
+var query = '/api/v1/ticker/24hr';
+query += '?symbol=BTCUSDT';
+
+//concatenate the string from binceApiUrl variable and string in the query variable
+var url = binanceApiUrl + query;
+
+//create an XMLHttpRequest object
+//store XMLHttpRequest object in variable ourRequest
+//XMLHttpRequest is used to make an http request to a server
+
+var ourRequest = new XMLHttpRequest();
+//the XMLHttpRequest can be used to download dta by making a 'GET' requested
+//psss 'GET' as the method when calling open() method
+//url is https://api.binance.com/api/v1/ticker/24hr?symbol=BTCUSDT 
+//url is a DOMString representing the URL to send the request to, see link above
+//uri is binanceApiURL + query + query +=
+//true for its third parameter to indicate that the request should be handled asynchronously
+ourRequest.open('GET',url,true);
+// Do something with the retrieved data ( found in xmlhttp.response ), test using console.log
+ourRequest.onload = function(){
+    //display the response data as a sting
+    console.log(ourRequest.responseText);
+}  
+/*The XMLHttpRequest method send() sends the request to the server. 
+If the request is asynchronous (which is the default), 
+this method returns as soon as the request is sent and the result is delivered using events
+*/
+ourRequest.send();        
+</script>
+</html>
+
+
+
+
+
