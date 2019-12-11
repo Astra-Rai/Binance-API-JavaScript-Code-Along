@@ -1,4 +1,4 @@
-# Binance-API-JavaScript-Projects
+# Binance-API-JavaScript-Project
 Binance API JavaScript Project
 
 Binance API (https://binance-docs.github.io/apidocs/spot/en/#change-log) used to display information 
